@@ -13,7 +13,7 @@ jobs:
       - uses: docker://squidfunk/mkdocs-material@sha256:5282540ecb411db49a2ae3ccea3b00a0ab1f55ecd8151e2941cf0ccad69d2beb
         with:
           args: "build"
-      - uses: docker://cardboardci/netlify:2.6.4-20190930
+      - uses: docker://cardboardci/netlify:latest
         env:
           NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
