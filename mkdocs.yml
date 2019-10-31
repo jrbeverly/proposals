@@ -1,0 +1,22 @@
+# Project information
+site_name: 'Design Documents'
+site_description: 'The list of design documents is published on the Proposals Repository.'
+site_author: 'Jonathan Beverly'
+site_dir: public
+docs_dir: src
+
+theme:
+  name: 'material'
+  language: 'en'
+  logo: 'assets/images/logo.png'
+  favicon: 'assets/images/favicon.ico'
+  palette:
+    primary: 'white'
+    accent: 'indigo'
+
+extra:
+  search:
+    language: 'en'
+  social:
+    - type: 'github'
+      link: 'https://github.com/jrbeverly/proposals'
