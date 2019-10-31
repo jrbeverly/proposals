@@ -14,8 +14,5 @@ jobs:
         with:
           args: "build"
       - uses: docker://cardboardci/netlify:latest
-        env:
-          NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         with:
-          args: "netlify deploy --dir public --site ${NETLIFY_SITE_ID} --auth ${NETLIFY_TOKEN} --prod"
+          args: "netlify deploy --dir public --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_TOKEN }} --prod"
