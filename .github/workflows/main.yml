@@ -1,0 +1,21 @@
+name: "Build and Deploy"
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: docker://squidfunk/mkdocs-material@sha256:5282540ecb411db49a2ae3ccea3b00a0ab1f55ecd8151e2941cf0ccad69d2beb
+        with:
+          args: "build"
+      - uses: docker://cardboardci/netlify:2.6.4-20190930
+        env:
+          NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        with:
+          args: "deploy --dir public --site ${NETLIFY_SITE_ID} --auth ${NETLIFY_TOKEN} --prod"
