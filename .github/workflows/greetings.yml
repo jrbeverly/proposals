@@ -1,0 +1,19 @@
+name: Greetings
+
+on: [pull_request, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: |
+            Thanks for your issue. It looks like this may be your first contribution to the proposals repository. Before we can look at your pull request, you'll need to make sure your proposal meets some requirements.
+
+            📝 Please visit https://github.com/jrbeverly/proposals/blob/master/docs/PROPOSALS.md.
+        pr-message: |
+            Thanks for your pull request. It looks like this may be your first contribution to the proposals repository. Before we can look at your pull request, you'll need to make sure your proposal meets some requirements.
+
+            📝 Please visit https://github.com/jrbeverly/proposals/blob/master/docs/PROPOSALS.md.
