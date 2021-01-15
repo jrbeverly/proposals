@@ -1,0 +1,15 @@
+{
+  "slug": "proposals-concept",
+  "namespace": "jrbeverly",
+  "status": "archived",
+  "icon": "icon.svg",
+  "license": {
+    "type": "MIT",
+    "content": "Jonathan Beverly <jrbeverly>"
+  },
+  "topics": [
+    "proposals",
+    "design-documents"
+  ],
+  "languages": []
+}
