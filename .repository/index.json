@@ -11,5 +11,7 @@
     "proposals",
     "design-documents"
   ],
-  "languages": []
+  "languages": [
+    "Dockerfile"
+  ]
 }
