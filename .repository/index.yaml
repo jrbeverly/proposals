@@ -1,0 +1,15 @@
+slug: proposals-concept
+description: Index of all proposals and design documents
+project: workbench
+namespace:
+status: archived
+icon: icon.svg
+license:
+  type: MIT
+  content: Jonathan Beverly <jrbeverly>
+  year: 2021
+topics: |-
+  [
+    "proposals",
+    "design-documents"
+  ]
